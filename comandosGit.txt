@@ -1,0 +1,50 @@
+@@ -0,0 +1,49 @@
+Principais comandos do GIT
+
+git init
+git checkout -b nome_branch
+git add *
+git commit -m "mensagem de exemplo"
+git push --set-upstream origin nome_branch
+
+
+git restore --stage <file> (para voltar para untracked)
+
+git merge <nome_da_branch>  (primeiro vá para master -> checkout master e depois faça o merge com a branch que desejar)
+
+git branch (Para ver as branchs disponíveis)
+
+git branch -m <novo_nome> (Para trocar o nome da branch atual)
+ou
+git branch -m <nome_atual> <novo_nome> (quando não estou na branch que quero renomear)
+
+delete branch <nome_branch> (deletar branch)
+
+git stash (Comando para pegar tudo untracked ou staged e guardar numa caixa dentro da branch atual)
+git stash list (lista os stash criados)
+git stash pop [0] (volta para a branch o que foi guardado no stash indice [i])
+
+git log (Para ver o histórico de alterações)
+git log <Diretorio ou arquivo> (Para ver o histórico de alterações específico)
+git log --oneline
+git log --graph (exibe o histórico)
+gitk (Ferramenta gráfica exibe o histório)
+
+=== Desfazendo o commit
+git reset <hash> (para reverter o commit até o hash) -> Gera um commit com as alterações inversas
+git reset HEAD~1 (HEAD~1 para voltar uma posição atrás)
+git reset --soft HEAD~1  (HEAD~1 para voltar uma posição atrás e manter no Staging/Index)
+git reset --mixed HEAD~1  (HEAD~1 para voltar uma posição atrás e manter no Working Dir)
+git reset --hard HEAD~1  (HEAD~1 para apagar o commit e eliminar as alterações sem possibilidade de dar add ou novo commit)
+
+git revert
+
+git config --global --list (Lista configurações)
+
+git commit (Abre o editor padrão para digitar o texto do commit e se colocar closes #1 (fecharia a issue 1))
+
+
+https://gitlab.coderp.sp.gov.br/dashboard/issues?assignee_username=wrssilva
+
+//Git Comandos
+https://rogerdudler.github.io/git-guide/index.pt_BR.html
